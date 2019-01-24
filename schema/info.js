@@ -8,7 +8,7 @@ const Schema = mongoose.Schema
 const InfoSchema = new Schema({
     hobby: [String],
     height: String,
-    weight: Number,
+    weight: String,
     meta: {
         createdAt: {
             type: Date,
