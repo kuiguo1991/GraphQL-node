@@ -21,7 +21,7 @@ router.post('/graphql', async (ctx, next) => {
       .get('/graphql', async (ctx, next) => {
         await graphqlKoa({schema: schema})(ctx, next) // 使用schema
       })
-      .get('/graphiql', async (ctx, next) => {
+      .get('/graphqlAPI', async (ctx, next) => {
         await graphiqlKoa({endpointURL: '/graphql'})(ctx, next) // 重定向到graphiql路由
       })
 module.exports = router
