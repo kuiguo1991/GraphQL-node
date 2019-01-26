@@ -10,11 +10,11 @@ import {
     GraphQLInt
   } from 'graphql';
   
-  import mongoose from 'mongoose'
-  
-  import {InfoType} from './info'
-  const Student = mongoose.model('Student')
-  
+  import { InfoType } from './info'
+
+  // import mongoose from 'mongoose'
+  // const Student = mongoose.model('Student')
+  const Student = require("../schema/student");
   
   let StudentType = new GraphQLObjectType({
     name: 'Student',

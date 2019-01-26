@@ -9,8 +9,9 @@ import {
     isOutputType
   } from 'graphql';
   
-  import mongoose from 'mongoose'
-  const Info = mongoose.model('Info')
+  // import mongoose from 'mongoose'
+  // const Info = mongoose.model('Info')
+const Info = require("./../schema/info")
   
   
   const objType = new GraphQLObjectType({
