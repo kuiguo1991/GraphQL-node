@@ -3,23 +3,22 @@ const Student = require("../schema/student");
 
 // 保存学生数据的方法
 export const saveStudent = async (ctx, next) => {
-    // 获取前端请求的数据
-    const opts = ctx.request.body
+  // 获取前端请求的数据
+  const opts = ctx.request.body;
 
-    const student = new Student(opts)
-    const saveStudent = await student.save() // 保存数据
-
-    if (saveStudent) {
-        ctx.body = {
-            success: true,
-            student: saveStudent
-        }
-    } else {
-        ctx.body = {
-            success: false
-        }
-    }
-}
+  const student = new Student(opts);
+  const saveStudent = await student.save(); // 保存数据
+  if (saveStudent) {
+    ctx.body = {
+      success: true,
+      student: saveStudent
+    };
+  } else {
+    ctx.body = {
+      success: false
+    };
+  }
+};
 
 // 查询所有学生的数据
 export const fetchStudent = async (ctx, next) => {
