@@ -6,11 +6,14 @@ import schema from '../graphql/schema'
 
 const router = require('koa-router')()
 
-router.post('/saveinfo', saveInfo)
-      .get('/info', fetchInfo)
-      .post('/savestudent', saveStudent)
-      .get('/student', fetchStudent)
-      .get('/studentDetail', fetchStudentDetail)
+
+
+router
+  .post("/saveinfo", saveInfo)
+  .get("/info", fetchInfo)
+  .post("/savestudent", saveStudent)
+  .get("/student", fetchStudent)
+  .get("/studentDetail", fetchStudentDetail);
 
 
 

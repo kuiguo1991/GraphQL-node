@@ -1,6 +1,16 @@
 
 const Info = require("./../schema/info")
 
+
+/**
+* @api {post} /saveinfo 保存info信息
+* @apiDescription 保存info信息
+* @apiName /saveinfo
+* @apiGroup infos
+* @apiVersion 1.0.0
+*/
+
+
 // 保存info信息
 export const saveInfo = async (ctx, next) => {
     // 获取请求的数据
@@ -21,7 +31,14 @@ export const saveInfo = async (ctx, next) => {
     }
 }
 
-// 获取所有的info数据
+
+/**
+ * @api {get} /info 获取所有的info数据
+ * @apiDescription /info
+ * @apiName info
+ * @apiGroup infos
+ * @apiVersion 1.0.0
+ */
 export const fetchInfo = async (ctx, next) => {
     const infos = await Info.find({}) // 数据查询
 

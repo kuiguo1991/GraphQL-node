@@ -1,7 +1,14 @@
 
 const Student = require("../schema/student");
 
-// 保存学生数据的方法
+
+/**
+  * @api {post} /savestudent 保存学生数据的方法
+  * @apiDescription /savestudent
+  * @apiName savestudent
+  * @apiGroup students
+  * @apiVersion 1.0.0
+  */
 export const saveStudent = async (ctx, next) => {
   // 获取前端请求的数据
   const opts = ctx.request.body;
@@ -21,6 +28,14 @@ export const saveStudent = async (ctx, next) => {
 };
 
 // 查询所有学生的数据
+
+/**
+ * @api {get} /student 查询所有学生的数据
+ * @apiDescription /student
+ * @apiName student
+ * @apiGroup students
+ * @apiVersion 1.0.0
+ */
 export const fetchStudent = async (ctx, next) => {
     const students = await Student.find({})
 
@@ -37,6 +52,14 @@ export const fetchStudent = async (ctx, next) => {
 }
 
 // 查询学生的数据以及附加数据
+
+/**
+ * @api {get} /studentDetail 查询学生的数据以及附加数据
+ * @apiDescription /studentDetail
+ * @apiName studentDetail
+ * @apiGroup students
+ * @apiVersion 1.0.0
+ */
 export const fetchStudentDetail = async (ctx, next) => {
 
     // 利用populate来查询关联info的数据

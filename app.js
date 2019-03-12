@@ -6,8 +6,9 @@ const cors = require("koa2-cors");
 import mongoose from "mongoose";
 import config from './config/index'
 const GraphqlRouter = require('./router')
-// import { saveInfo, fetchInfo } from './controllers/info' // 引入info controller
-// import { saveStudent, fetchStudent, fetchStudentDetail } from './controllers/student'
+
+
+
 
 mongoose.connect(
   config.dbPath,
